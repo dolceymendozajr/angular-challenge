@@ -1,0 +1,14 @@
+<div class="rounded shadow-md my-10 relative pin-t pin-l bg-white w-full">
+
+    <input #city class="rounded p-3 w-10/12 text-xl text-indigo-900 placeholder-indigo-900 font-medium" placeholder="City">
+    <button class="w-2/12"><img class="mx-auto" src="/assets/icons/Lupatest.svg"
+            (click)="searchCity(city.value)" /></button>
+
+    <ul class="list-reset border-t-2 h-32 overflow-y-scroll overflow-x-hidden">
+        <li *ngFor="let city of cities;let cityIndex = index">
+            <p class="px-4 block text-indigo-900 cursor-pointer capitalize hover:text-purple-700" (click)="selectCity(cityIndex)">
+                {{city.name}}
+            </p>
+        </li>
+    </ul>
+</div>
